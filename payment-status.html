@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment Status</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      data-precedence="default"
+    />
+    <link
+      as="font"
+      crossorigin="anonymous"
+      href="assets/fonts/matter/Matter-SemiBold.woff"
+      rel="preload"
+      type="font/woff"
+    />
+    <link
+      as="font"
+      crossorigin="anonymous"
+      href="assets/fonts/matter/Matter-Regular.woff"
+      rel="preload"
+      type="font/woff"
+    />
+    <link
+      as="font"
+      crossorigin="anonymous"
+      href="assets/fonts/spotter-bold/semiBold.woff2"
+      rel="preload"
+      type="font/woff2"
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/matter/wolf1.woff2"
+      as="font"
+      type="font/woff2"
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/matter/wolf2.woff2"
+      as="font"
+      type="font/woff2"
+    />
+    <link rel="preload" href="assets/css/main.css" as="style" />
+    <link rel="stylesheet" href="assets/css/main.css" data-n-g="" />
+    <link rel="preload" href="assets/css/header.css" as="style" />
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <style></style>
+  <body>
+    <main>
+      <div
+        class="container pass"
+        style="
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: Poppins, sans-serif;
+        "
+      >
+        <div
+          class="text-center"
+          style="
+            max-width: 600px;
+            padding: 40px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <div>
+            <div class="mb-4">
+              <i
+                class="fas fa-check-circle"
+                style="font-size: 48px; color: rgb(0, 128, 128)"
+              ></i>
+            </div>
+            <h2 class="mb-4">Payment Successful!</h2>
+            <p class="mb-4">
+              Thank you for your purchase. You will receive a confirmation email
+              shortly.
+            </p>
+            <a
+              class="btn btn-primary"
+              href="index.html"
+              style="
+                background-color: rgb(0, 128, 128);
+                border-color: rgb(0, 128, 128);
+                padding: 10px 30px;
+                border-radius: 5px;
+                text-decoration: none;
+                color: white;
+                display: inline-block;
+              "
+              >Return to Home</a
+            >
+          </div>
+        </div>
+      </div>
+      <div
+        class="container fail"
+        style="
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-family: Poppins, sans-serif;
+        "
+      >
+        <div
+          class="text-center"
+          style="
+            max-width: 600px;
+            padding: 40px;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+          "
+        >
+          <div>
+            <div class="mb-4">
+              <i
+                class="fas fa-times-circle"
+                style="font-size: 48px; color: rgb(220, 53, 69)"
+              ></i>
+            </div>
+            <h2 class="mb-4">Payment Failed</h2>
+            <p class="mb-4">
+              Something went wrong with your payment. Please try again.
+            </p>
+            <a
+              class="btn btn-primary"
+              href="index.html"
+              style="
+                background-color: rgb(0, 128, 128);
+                border-color: rgb(0, 128, 128);
+                padding: 10px 30px;
+                border-radius: 5px;
+                text-decoration: none;
+                color: white;
+                display: inline-block;
+              "
+              >Return to Home</a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const params = new URLSearchParams(window.location.search);
+        const status = params.get("success");
+
+        const passContainer = document.querySelector(".pass");
+        const failContainer = document.querySelector(".fail");
+
+        if (status === "pass") {
+          passContainer.style.display = "flex";
+          failContainer.style.display = "none";
+        } else if (status === "fail") {
+          passContainer.style.display = "none";
+          failContainer.style.display = "flex";
+        } else {
+          window.location.href = "/404.html";
+        }
+      });
+
+      (function (c, l, a, r, i, t, y) {
+        c[a] =
+          c[a] ||
+          function () {
+            (c[a].q = c[a].q || []).push(arguments);
+          };
+        t = l.createElement(r);
+        t.async = 1;
+        t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0];
+        y.parentNode.insertBefore(t, y);
+      })(window, document, "clarity", "script", "ro434x2idf");
+    </script>
+  </body>
+</html>

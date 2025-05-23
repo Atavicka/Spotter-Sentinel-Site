@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modal Popup</title>
+  <style>
+
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,.75);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal.active {
+      display: flex;
+    }
+
+    .modal-box {
+      background: white;
+      padding: 30px 40px;
+      border-radius: 12px;
+      width: 90%;
+      max-width: 450px;
+      position: relative;
+      box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    
+    .close-modal {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 32px;
+      cursor: pointer;
+      color: #666;
+    }
+
+     .checkmark {
+      font-size: 50px;
+      color: #28a745;
+      margin-bottom: 20px;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #28a745;
+      margin-bottom: 15px;
+    }
+
+    .message {
+      font-size: 15px;
+      color: #333;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      padding: 12px 30px;
+      width: 300px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Open Modal Button -->
+  <button class="open-modal-btn">Choose Plan</button>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-box">
+      <button class="close-modal" onclick="closeModal()">&times;</button>
+ 
+    <div class="checkmark"><svg fill="#28a745" width="60" height="60" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 20 20" enable-background="new 0 0 20 20" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10,20C4.5,20,0,15.5,0,10S4.5,0,10,0s10,4.5,10,10S15.5,20,10,20z M10,2c-4.4,0-8,3.6-8,8s3.6,8,8,8s8-3.6,8-8S14.4,2,10,2 z"></path> <path d="M7.3,13.7l-2-2c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0L8,11.6l5.3-5.3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6 C8.3,14.1,7.7,14.1,7.3,13.7z"></path> </g></svg></div>
+    <div class="title">Form Submitted!</div>
+    <div class="message">
+      We've sent a verification message to your email. Please verify your identity so we can process your request.
+    </div>
+    <button class="btn">Continue</button>
+  </div>
+    </div>
+  </div>
+
+  <!-- JavaScript to control modal -->
+  <script>
+    const modal = document.getElementById("modal");
+    const openBtn = document.querySelector(".open-modal-btn");
+
+    openBtn.addEventListener("click", () => {
+      modal.classList.add("active");
+    });
+
+    function closeModal() {
+      modal.classList.remove("active");
+    }
+
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        closeModal();
+      }
+    });
+  </script>
+
+</body>
+
+</html>
