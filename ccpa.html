@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotter- CCPA Right </title>
+  <link as="font" crossorigin="anonymous" href="assets/fonts/matter/Matter-SemiBold.woff" rel="preload"
+    type="font/woff" />
+  <link as="font" crossorigin="anonymous" href="assets/fonts/matter/Matter-Regular.woff" rel="preload"
+    type="font/woff" />
+  <link as="font" crossorigin="anonymous" href="assets/fonts/spotter-bold/semiBold.woff2" rel="preload"
+    type="font/woff2" />
+  <link rel="preload" href="assets/fonts/matter/wolf1.woff2" as="font" type="font/woff2" />
+  <link rel="preload" href="assets/fonts/matter/wolf2.woff2" as="font" type="font/woff2" />
+  <link rel="preload" href="assets/css/main.css" as="style" />
+  <link rel="stylesheet" href="assets/css/main.css" data-n-g="" />
+  <link rel="preload" href="assets/css/header.css" as="style" />
+  <link rel="stylesheet" href="assets/css/header.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="apple-touch-icon" href="assets/favicon.ico" />
+  <link rel="icon" type="image/png" href="assets/favicon.ico" />
+  <link rel="icon" type="image/png" href="assets/favicon.ico" />
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+  <style id="__jsx-2714316418">
+    :root {
+      --font-inter: "__Inter_d65c78", "__Inter_Fallback_d65c78";
+      --font-cal: "mainFont", "mainFont_Fallback";
+    }
+
+    @media screen and (min-width: 768px) {
+      .margin {
+        margin-bottom: 10px;
+      }
+
+      .spacing {
+        margin-top: -40px
+      }
+    }
+
+    .round-container {
+      background: #fff;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-top: 30px;
+      width: 100%;
+    }
+
+    .please {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 18px;
+    }
+
+    .input-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .input-block {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-bottom: 6px;
+      font-weight: bold;
+      font-size: 14px;
+      color: #000;
+    }
+
+    .input-with-icon {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .input-with-icon input,
+    .input-with-icon select {
+      flex: 1;
+    }
+
+    input,
+    select {
+      padding: 10px;
+      font-size: 14px;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      transition: border 0.3s;
+      width: 100%;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: #00796b;
+      outline: none;
+    }
+
+    .optional-note {
+      font-size: 12px;
+      color: #666;
+      margin-top: 4px;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 12px;
+      margin-top: 4px;
+      display: none;
+    }
+
+    .error-icon {
+      display: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: red;
+      color: white;
+      font-size: 14px;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .has-error label {
+      color: red;
+    }
+
+    .has-error input,
+    .has-error select {
+      border-color: red;
+    }
+
+    .has-error .error-message,
+    .has-error .error-icon {
+      display: flex;
+    }
+
+    .input-actions {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .input-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 580px) {
+      .input-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .submit-btn {
+      margin-right: auto;
+      margin-left: auto;
+      display: block;
+      background-color: #008080;
+      color: #fff;
+      border: none;
+      padding: 14px;
+      font-size: 16px;
+      border-radius: 30px;
+      width: 250px;
+      cursor: pointer;
+      transition: background 0.3s;
+      font-size: 18px;
+    }
+
+    .submit-btn:hover {
+      background-color: white;
+      border: 2px solid #008080;
+      color: #008080
+    }
+  </style>
+</head>
+
+<body>
+  <div class="h-24 calendar-grid !border-b-0 ![--grid-gap-size:0px]">
+    <div class="border-b-0 before:hidden after:hidden">
+      <div
+        class="w-full max-w-[1440px] px-4 md:px-[34px] fixed left-1/2 top-0 z-50 mx-auto mb-8 flex -translate-x-1/2 items-center justify-between py-5 lg:mt-2 lg:max-w-[min(1150px,calc(100vw-24px))] lg:rounded-2xl lg:py-0 before:shadow-fade before:absolute before:inset-0 before:z-[-1] before:bg-white before:opacity-0 before:transition-opacity before:duration-300 lg:before:rounded-2xl bg-primary-50/95 border-0 before:block before:border"
+        id="sticky-div">
+        <div class="flex cursor-pointer rtl:relative rtl:top-3">
+          <a href="index.html" class="dLVeol" href="/"><img src="assets/images/sentinel.png"
+              style="width: 40px">sentinel</a>
+        </div>
+        <nav aria-label="Main" data-orientation="horizontal" dir="ltr" class="hidden lg:block">
+          <div class="font-matter rounded-4xl relative z-20 text-sm leading-[22px] text-black">
+            <div style="position: relative">
+              <ul data-orientation="horizontal" id="nav-items" class="flex" dir="ltr">
+               <li
+                  class="relative -mx-2 flex flex-col justify-center [&amp;:first-child]:ml-0 [&amp;:nth-child(5)]:mr-0">
+                  <a class="flex items-start px-7 py-5 mix-blend-difference header_blend-layer__eFsy_ transition-opacity hover:opacity-80"
+                    href="index.html">Home</a>
+                  <div></div>
+                </li>
+                <li
+                  class="relative -mx-2 flex flex-col justify-center [&amp;:first-child]:ml-0 [&amp;:nth-child(5)]:mr-0">
+                  <a class="flex items-start px-7 py-5 mix-blend-difference header_blend-layer__eFsy_ transition-opacity hover:opacity-80"
+                    href="watch-demo.html">Watch Demo</a>
+                  <div></div>
+                </li>
+                <li id="nav-pointer" class="rounded-4xl absolute -z-10 opacity-0"></li>
+              </ul>
+            </div>
+
+          </div>
+        </nav>
+        <div class="flex items-center justify-center">
+          <a class="mr-4 hidden text-sm font-medium lg:flex opacity-100" href="https://safetyapp.spotter.ai/login">Sign
+            in</a>
+          <div>
+            <a class="px-3 py-2 text-sm font-medium border border-[transparent] dark:text-black bg-neutral-900 dark:bg-white hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 focus-visible:ring-neutral-900 hover:opacity-90 transition-all duration-150 ease-in-out group relative hidden overflow-hidden whitespace-nowrap rounded-xl lg:flex items-center justify-center text-white before:shadow-[0px_2px_0.4px_0px_rgba(255,_255,_255,_0.16)_inset] before:pointer-events-none before:absolute before:inset-0 before:rounded-xl disable"
+              style="background: 
+linear-gradient(180deg, #008080 0%, #0F8081 100%);
+" href="contact-sales.html" id="booking"><span>Book Demo</span></a>
+          </div>
+          <button class="p-2 hover:cursor-pointer lg:hidden harmburger" aria-label="Open menu">
+            <div class="relative h-4 w-4">
+              <span
+                class="absolute left-0 top-0 h-[1.5px] w-4 transform transition-all duration-300 bg-black rotate-0"></span><span
+                class="absolute left-0 top-[7px] h-[1.5px] w-4 transition-all duration-300 bg-black opacity-100"></span><span
+                class="absolute left-0 top-[14px] h-[1.5px] w-4 transform transition-all duration-300 bg-black rotate-0"></span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="bg-primary-50 fixed inset-0 z-40 h-0 w-full opacity-0 lg:!hidden top-[72px] pointer-events-none ham">
+      <ul id="mobile-links"
+        class="font-cal text-standard border-primary-700 flex flex-col overflow-y-auto border-t-2 pb-[290px] visible">
+        <a class="border-primary-700 align-center leading-standard flex border-b-2 border-dashed px-4 py-4 md:px-[34px]"
+          href="#how-it-works">How it works</a><a
+          class="border-primary-700 align-center leading-standard flex border-b-2 border-dashed px-4 py-4 md:px-[34px]"
+          href="#benefits">Benefits</a><a
+          class="border-primary-700 align-center leading-standard flex border-b-2 border-dashed px-4 py-4 md:px-[34px]"
+          href="#testimonials">Testimonials</a><a
+          class="border-primary-700 align-center leading-standard flex border-b-2 border-dashed px-4 py-4 md:px-[34px]"
+          href="watch-demo.html">Watch Demo</a>
+      </ul>
+      <div
+        class="header_cta__BlqBL text-standard font-matter fixed bottom-0 mx-auto flex w-full flex-col items-center justify-center gap-4 bg-[transparent] px-4 py-6 md:pb-12">
+        <p class="">
+          Existing customer?
+          <a href="https://safetyapp.spotter.ai/login"><span class="font-bold">Sign In</span></a>
+        </p>
+        <a href="contact-us.html"
+          class="px-3 py-2 font-medium relative border border-[transparent] dark:text-black bg-neutral-900 dark:bg-white hover:bg-neutral-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-1 focus-visible:ring-neutral-900 hover:opacity-90 transition-all duration-150 ease-in-out flex !h-20 w-full max-w-lg items-center justify-center overflow-hidden rounded-xl text-center text-xl bg-gradient-to-b from-[#2c2c30] to-[#1d1d20] text-white before:pointer-events-none before:absolute before:inset-0 before:rounded-xl before:shadow-[0px_2px_0.4px_0px_rgba(255,_255,_255,_0.16)_inset]">Book
+          Demo</a>
+      </div>
+    </div>
+  </div>
+  <main class="text-primary-700 text-standard font-matter leading-normal">
+    <div class="calendar-grid">
+      <section>
+        <div class="mx-auto w-full relative gap-8 overflow-clip rounded-xl py-6 md:py-10 !bg-transparent px-1 md:px-1">
+          <div class="prose spacing  mx-auto max-w-6xl px-4 md:px-7">
+            <div class="md:px-8">
+              <p><strong>1. Your CCPA Rights </strong> <br />If you are a California resident, you have the following
+                rights under the CCPA:
+              <ul>
+                <li>Right to Know – You have the right to request details about the personal information we collect,
+                  use, disclose, and sell</li>
+                <li>
+                  Right to Delete – You may request that we delete any personal information we have collected from you,
+                  subject to certain exceptions.
+                </li>
+                <li>Right to Opt-Out – You have the right to opt-out of the sale of your personal information</li>
+                <li>Right to Non-Discrimination – We will not discriminate against you for exercising your rights under
+                  the CCPA.</li>
+              </ul>
+              </p>
+
+              <p><strong>2. Information We Collect </strong> <br />We collect personal information necessary to provide
+                MVR (Motor Vehicle Records) and PSP (Pre-Employment Screening Program) reports. This may include:
+              <ul>
+                <li>Driver’s License Number (CDL)</li>
+                <li>
+                  Name and Contact Information
+                </li>
+                <li>Payment Details (processed securely)</li>
+                <li>Device and Usage Data</li>
+              </ul>
+              For a full list of categories of personal information we collect, please refer to our Privacy Policy.
+              </p>
+
+
+              <div class="round-container">
+                <p class="please"><strong>Please complete the form below to request
+                    information concerning your personal data collected or used by our company.</strong></p>
+                <form id="requestForm" novalidate>
+                  <div class="input-grid">
+
+                    <div class="input-block">
+                      <label for="name">Name</label>
+                       <div class="input-with-icon">
+                        <input type="text" id="name" required />
+                        <span class="error-icon">!</span>
+                      </div>
+                      <div class="error-message">Please enter your name</div>
+                    </div>
+
+                    <div class="input-block">
+                      <label for="surname">Surname</label>
+                      <div class="input-with-icon">
+                        <input type="text" id="surname" required />
+                        <span class="error-icon">!</span>
+                      </div>
+                      <div class="error-message">Please enter your surname</div>
+                    </div>
+
+                    <div class="input-block has-check">
+                      <label for="email">Email address</label>
+                      <div class="input-with-icon">
+                        <input type="email" id="email" required />
+                        <span class="error-icon">!</span>
+                      </div>
+                      <div class="error-message">Please enter your email address</div>
+                    </div>
+
+                    <div class="input-block has-check">
+                      <label for="label">Label</label>
+                      <div class="input-with-icon">
+                        <select id="label" required>
+                          <option value="" disabled selected>Select label</option>
+                          <option value="Label A">Label A</option>
+                          <option value="Label B">Label B</option>
+                        </select>
+                        <span class="error-icon">!</span>
+                      </div>
+                      <div class="error-message">Please select a label</div>
+                    </div>
+
+                    <div class="input-block">
+                      <label for="phone">Phone number</label>
+                      <input type="tel" id="phone" />
+                      <div class="optional-note">Optional - we never use this for marketing</div>
+                    </div>
+
+                    <div class="input-block">
+                      <label for="request">Request</label>
+                       <div class="input-with-icon">
+                      <select id="request" required>
+                        <option value="" disabled selected>Select request</option>
+                        <option value="Unsubscribe me from future marketing communications ">Unsubscribe me from future
+                          marketing communications </option>
+                        <option
+                          value="Provide the categories of personal information about me that the business collects and uses">
+                          Provide the categories of personal information about me that the business collects and uses
+                        </option>
+                        <option value="Does the business sell my personal information? ">
+                          Does the business sell my personal information?
+                        </option>
+                        <option value="Provide the specific personal information the business has about me">
+                          Provide the specific personal information the business has about me
+                        </option>
+                        <option value="Delete specific data (more info provided below)">
+                          Delete specific data (more info provided below)
+                        </option>
+                        <option value="PDelete all of my personal information">
+                          Delete all of my personal information
+                        </option>
+                        <option value=" Do not sell my personal information">
+                          Do not sell my personal information
+                        </option>
+                        <option value="Other">
+                          Other
+                        </option>
+                      </select>
+                         <span class="error-icon">!</span>
+                      </div>
+                      <div class="error-message">Please select a request</div>
+                    </div>
+
+                    <div class="input-block has-check">
+                      <label for="state">State</label>
+                      <div class="input-with-icon">
+                        <select id="state" required>
+                          <option value="">Select state</option>
+                          <option value="Alabama">Alabama</option>
+                          <option value="Alaska">Alaska</option>
+                          <option value="Arizona">Arizona</option>
+                          <option value="Arkansas">Arkansas</option>
+                          <option value="California">California</option>
+                          <option value="Colorado">Colorado</option>
+                          <option value="Connecticut">Connecticut</option>
+                          <option value="Delaware">Delaware</option>
+                          <option value="Florida">Florida</option>
+                          <option value="Georgia">Georgia</option>
+                          <option value="Hawaii">Hawaii</option>
+                          <option value="Idaho">Idaho</option>
+                          <option value="Illinois">Illinois</option>
+                          <option value="Indiana">Indiana</option>
+                          <option value="Iowa">Iowa</option>
+                          <option value="Kansas">Kansas</option>
+                          <option value="Kentucky">Kentucky</option>
+                          <option value="Louisiana">Louisiana</option>
+                          <option value="Maine">Maine</option>
+                          <option value="Maryland">Maryland</option>
+                          <option value="Massachusetts">Massachusetts</option>
+                          <option value="Michigan">Michigan</option>
+                          <option value="Minnesota">Minnesota</option>
+                          <option value="Mississippi">Mississippi</option>
+                          <option value="Missouri">Missouri</option>
+                          <option value="Montana">Montana</option>
+                          <option value="Nebraska">Nebraska</option>
+                          <option value="Nevada">Nevada</option>
+                          <option value="New Hampshire">New Hampshire</option>
+                          <option value="New Jersey">New Jersey</option>
+                          <option value="New Mexico">New Mexico</option>
+                          <option value="New York">New York</option>
+                          <option value="North Carolina">North Carolina</option>
+                          <option value="North Dakota">North Dakota</option>
+                          <option value="Ohio">Ohio</option>
+                          <option value="Oklahoma">Oklahoma</option>
+                          <option value="Oregon">Oregon</option>
+                          <option value="Pennsylvania">Pennsylvania</option>
+                          <option value="Rhode Island">Rhode Island</option>
+                          <option value="South Carolina">South Carolina</option>
+                          <option value="South Dakota">South Dakota</option>
+                          <option value="Tennessee">Tennessee</option>
+                          <option value="Texas">Texas</option>
+                          <option value="Utah">Utah</option>
+                          <option value="Vermont">Vermont</option>
+                          <option value="Virginia">Virginia</option>
+                          <option value="Washington">Washington</option>
+                          <option value="West Virginia">West Virginia</option>
+                          <option value="Wisconsin">Wisconsin</option>
+                          <option value="Wyoming">Wyoming</option>
+                        </select>
+
+                        <span class="error-icon">!</span>
+                      </div>
+                      <div class="error-message">Please select the state</div>
+                    </div>
+
+                    <div class="input-block">
+                      <label for="zip">Zip code</label>
+                         <div class="input-with-icon">
+                        <input type="number" id="zip" required />
+                        <span class="error-icon">!</span>
+                      </div>
+                      <div class="error-message">Please enter your zip code</div>
+                    </div>
+
+                  </div>
+
+                  <div class="input-actions">
+                    <button type="submit" class="submit-btn">Submit</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+    </div>
+
+   <section class="mx-3 md:mx-0">
+      <div
+        class="mx-auto relative max-w-[1200px] gap-8 overflow-clip rounded-xl px-1 md:py-20 !bg-transparent text-black mt-12 flex h-full w-full flex-col py-14 md:px-0">
+        <div class="flex w-full flex-col gap-6 md:flex-row md:justify-between">
+          <div class="mb-12 flex flex-col text-sm md:pl-2 lg:mb-0">
+            <div class="flex pb-2 lg:pb-7">
+              <div class="flex">
+                 <a href="index.html" class="dLVeol" href="/"><img src="assets/images/sentinel.png"
+              style="width: 40px">sentinel</a>
+              </div>
+            </div>
+            <p class="max-w-[250px] lg:block">
+              2025 © Copyright - All Rights Reserved.
+            </p>
+
+            <div class="mt-6 flex gap-4">
+              <a class="[&amp;>svg]:transition-fill hover:invert [&amp;>svg]:duration-150" aria-label="Twitter"
+                target="_blank" rel="noopener" href="https://twitter.com/spotter_ai"><svg class="fill-primary-300 mt-1"
+                  width="22" height="22" viewBox="0 0 26 26" aria-label="X formerly known as Twitter"
+                  fill="currentColor">
+                  <path
+                    d="M16.99 0H20.298L13.071 8.26L21.573 19.5H14.916L9.702 12.683L3.736 19.5H0.426L8.156 10.665L0 0H6.826L11.539 6.231L16.99 0ZM15.829 17.52H17.662L5.83 1.876H3.863L15.829 17.52Z">
+                  </path>
+                </svg></a><a class="[&>svg]:transition-fill hover:invert [&>svg]:duration-150" aria-label="Facebook"
+                target="_blank" rel="noopener" href="https://www.facebook.com/spotterai">
+                <svg class="fill-primary-300 mt-[1px]" width="22" height="22" viewBox="0 0 24 24" aria-label="Facebook"
+                  fill="currentColor">
+                  <path
+                    d="M22.675 0H1.325C.595 0 0 .594 0 1.325v21.35C0 23.405.595 24 1.325 24h11.495v-9.294h-3.11v-3.622h3.11V8.412c0-3.103 1.847-4.812 4.655-4.812 1.348 0 2.749.266 2.749.266v3.046h-1.547c-1.528 0-2.003.95-2.003 1.922v2.307h3.364l-.537 3.622h-2.827V24h5.551c.73 0 1.325-.595 1.325-1.325V1.325C24 .595 23.405 0 22.675 0z">
+                  </path>
+                </svg>
+              </a>
+              <a class="[&>svg]:transition-fill hover:invert [&>svg]:duration-150" aria-label="LinkedIn" target="_blank"
+                rel="noopener" href="https://www.linkedin.com">
+                <svg class="fill-primary-300 mt-[1px]" width="22" height="22" viewBox="0 0 24 24" aria-label="LinkedIn"
+                  fill="currentColor">
+                  <path
+                    d="M22.225 0H1.775C.795 0 0 .795 0 1.775v20.45C0 23.205.795 24 1.775 24h20.45c.98 0 1.775-.795 1.775-1.775V1.775C24 .795 23.205 0 22.225 0zM7.063 20.452H3.64V9.042h3.423v11.41zM5.351 7.292c-1.094 0-1.974-.88-1.974-1.974 0-1.095.88-1.975 1.974-1.975 1.095 0 1.975.88 1.975 1.975 0 1.094-.88 1.974-1.975 1.974zM20.451 20.452h-3.423v-5.684c0-1.352-.485-2.268-1.698-2.268-1.155 0-1.841.777-1.841 1.966v5.986h-3.423V9.042h3.423v1.562h.048c.475-.892 1.61-1.825 3.07-1.825 2.315 0 4.07 1.497 4.07 4.71v6.853z">
+                  </path>
+                </svg>
+              </a>
+            </div>
+            <p class="mt-2 max-w-[350px] pr-4 text-base transition-opacity ease-in-out">
+            <h1 class="text-[17px] font-semibold" style="padding-top:10px;">Headquarters</h1>
+            Spotter Sentinel LLC<br>
+            8 The Green, Suite B,
+            Dover, 19901.
+            </p>
+            <p class="mt-4 lg:block">
+              Need Help?
+
+              <a href="contact-us.html" class="text-[#0561A2] underline">Contact Us</a>
+            </p>
+          </div>
+          <div class="w-full md:flex md:w-auto md:justify-end">
+            <nav class="grid grid-cols-2 gap-x-8 gap-y-10 md:grid-cols-3 lg:grid-cols-4">
+
+    <ul>
+                <li class="text-[17px] font-semibold">Resources</li>
+                <li class="pt-4 text-[17px]">
+                  <a class="flex items-start text-[16px] hover:opacity-50" href="pricing-plan.html"
+                    target="_blank">Pricing Plan</a>
+                </li>
+                <li class="pt-4 text-[17px]">
+                  <a class="flex items-start text-[16px] hover:opacity-50" href="privacy.html">Privacy Policy</a>
+                </li>
+                <li class="pt-4 text-[17px]">
+                  <a class="flex items-start text-[16px] hover:opacity-50" href="terms-and-conditions.html">Terms and Conditions</a>
+                </li>
+                <li class="pt-4 text-[17px]">
+                  <a class="flex items-start text-[16px] hover:opacity-50" href="ccpa.html">CCPA</a>
+                </li>
+                <li class="pt-4 text-[17px]">
+                  <a class="flex items-start text-[16px] hover:opacity-50" href="contact-us.html">Support</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    const form = document.getElementById('requestForm');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const requiredFields = ['email', 'label', 'state', 'name', 'surname', 'zip', 'request'];
+
+      requiredFields.forEach(id => {
+        const input = document.getElementById(id);
+        const block = input.closest('.input-block');
+
+        if (!input.value.trim()) {
+          block.classList.add('has-error');
+        } else {
+          block.classList.remove('has-error');
+        }
+      });
+    });
+  </script>
+
+
+</body>
+
+</html>

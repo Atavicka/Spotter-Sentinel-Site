@@ -1,0 +1,140 @@
+.header_cta__BlqBL {
+  background: var(--bg-color);
+}
+.header_cta__BlqBL:before {
+  content: "";
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  position: absolute;
+  top: -58px;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(
+    0deg,
+    var(--bg-color) 0,
+    hsla(0, 0%, 95%, 0) 100%
+  );
+  background-size: cover;
+}
+@media (min-width: 768px) {
+  .header_cta__BlqBL:before {
+    top: -52px;
+  }
+}
+.header_cta-dark__F3_xc {
+  background: var(--bg-color-dark) !important;
+}
+.header_cta-dark__F3_xc:before {
+  background: linear-gradient(
+    0deg,
+    var(--bg-color-dark) 0,
+    hsla(0, 0%, 95%, 0) 100%
+  ) !important;
+}
+.header_cta-dark__F3_xc p {
+  color: var(--bg-color) !important;
+}
+.header_cta-ai__DmHLI {
+  background: #0b0a1f !important;
+}
+.header_cta-ai__DmHLI:before {
+  background: linear-gradient(0deg, #0b0a1f, hsla(0, 0%, 95%, 0)) !important;
+}
+.header_cta-ai__DmHLI p {
+  color: var(--bg-color) !important;
+}
+.header_blend-layer__eFsy_ {
+  transform: translateZ(0);
+}
+.header_dd-content__MFcUI[data-motion="from-start"] {
+  animation: header_shiftIn__KP2e5 0.35s ease-in-out;
+}
+.header_dd-content__MFcUI[data-motion="to-start"] {
+  animation: header_shiftOut__2FXaa 0.35s ease-in-out;
+}
+.header_dd-content__MFcUI[data-motion="from-end"] {
+  animation: header_shiftIn__KP2e5 0.35s ease-in-out;
+}
+.header_dd-content__MFcUI[data-motion="to-end"] {
+  animation: header_shiftOut__2FXaa 0.35s ease-in-out;
+}
+.header_dd-viewport__spd6Y[data-state="open"] {
+  animation: header_goIn__Q9bRA 0.3s ease-in-out;
+}
+.header_dd-viewport__spd6Y[data-state="closed"] {
+  animation: header_goOut__ptHGz 0.3s ease-in-out;
+}
+@keyframes header_goIn__Q9bRA {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes header_goOut__ptHGz {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+}
+@keyframes header_shiftIn__KP2e5 {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes header_shiftOut__2FXaa {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.connected-calendars_fadeout2__y7d2h,
+.connected-calendars_fadeout__UyWpS {
+  -webkit-mask-image: radial-gradient(
+    70% 50% at center,
+    #000 var(--fade-start, 25%),
+    transparent 100%
+  );
+  mask-image: radial-gradient(
+    70% 50% at center,
+    #000 var(--fade-start, 25%),
+    transparent 100%
+  );
+}
+@keyframes connected-calendars_orbit__CPJVE {
+  0% {
+    transform: rotate(0deg) translateY(var(--distance)) rotate(0deg);
+  }
+  to {
+    transform: rotate(1turn) translateY(var(--distance)) rotate(-1turn);
+  }
+}
+.connected-calendars_logo1__JWR62 {
+  --distance: 30cqw;
+  animation: connected-calendars_orbit__CPJVE 10s linear -3s infinite;
+  animation-play-state: running;
+}
+.connected-calendars_logo2__e3diy {
+  --distance: 30cqw;
+  animation: connected-calendars_orbit__CPJVE 10s linear -5s infinite;
+  animation-play-state: running;
+}
+.connected-calendars_logo3__BC76f {
+  --distance: 40cqw;
+  animation: connected-calendars_orbit__CPJVE 10s linear -7s infinite;
+  animation-play-state: running;
+}
